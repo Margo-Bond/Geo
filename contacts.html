@@ -6,8 +6,338 @@
     <link rel="stylesheet" href="./assets/style/normalize.css" />
     <link
       rel="stylesheet"
-      href="./assets/style/contactsStyle/contactsStyle.css" />
-    <title>Document</title>
+      href="./assets/style/contactsStyle/contactsStyle.css"
+    />
+    <title>Контакты</title>
   </head>
-  <body></body>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <!-- Header-top -->
+      <div class="header__top">
+        <div class="header__top_full">
+          <div class="header__top_logo">
+            <img src="./assets/images/homeImg/home_logo.svg" alt="logo" />
+          </div>
+          <div class="header__top_menu">
+            <nav>
+              <a href="/home.html">Главная</a>
+              <a href="./about.html">О компании</a>
+              <a href="./services.html">Услуги</a>
+              <a href="./news.html">Новости</a>
+              <a href="./contacts.html">Контакты</a>
+            </nav>
+            <div class="header__top_left">
+              <div class="contact_phone">
+                <a href="tel:+77172247280"
+                  ><img
+                    src="./assets/images/homeImg/home_top_tel.svg"
+                    alt="phone"
+                /></a>
+              </div>
+              <img
+                src="./assets/images/homeImg/home_top_lupa_stick.svg"
+                alt="lupa"
+              />
+              <div class="header__top_lupa">
+                <a href="./search.html"
+                  ><img
+                    src="./assets/images/homeImg/home_top_lupa.svg"
+                    alt="Поиск"
+                /></a>
+              </div>
+              <div class="header__top_languages">
+                <img
+                  class="header__top_languages-rus"
+                  src="./assets/images/aboutImg/rus.png"
+                  alt="Русский флаг"
+                />
+                <p>Русский</p>
+                <div class="choice">
+                  <input
+                    type="checkbox"
+                    id="dropdown-toggle"
+                    class="dropdown-toggle"
+                  />
+                  <label
+                    for="dropdown-toggle"
+                    class="header__top_languages-choice"
+                  >
+                    <img
+                      class="vector-choice"
+                      src="./assets/images/aboutImg/vector-options.png"
+                      alt="Выбор языка"
+                  /></label>
+                  <ul class="choice__list">
+                    <li>Казахский</li>
+                    <li>Английский</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Навигационная цепочка-->
+    <div class="header__link">
+      <a href="./home.html">Главная </a>
+      <img src="./assets/images/newsImg/Vectorblue.png" alt="Вектор2" />
+      <p>Контакты</p>
+    </div>
+
+    <!-- основная часть - По всем вопросам -->
+    <main class="main">
+      <div class="email">
+        <h2>
+          По всем вопросам
+          <a href="mailto:info@moperating.kz" class="contacts__email"
+            >info@moperating.kz</a
+          >
+        </h2>
+        <!-- основная часть - соц сети-->
+        <div class="contacts__media">
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            class="contacts__social-media"
+          >
+            <img
+              src="./assets/images/servicesImg/instagram.png"
+              alt="instagram"
+              class="contacts__social-media contacts__social-media_inst"
+            />
+          </a>
+          <a
+            href="https://www.vk.com/"
+            target="_blank"
+            class="contacts__social-media"
+          >
+            <img
+              src="./assets/images/servicesImg/vk.png"
+              alt="ВКонтакте"
+              class="contacts__social-media contacts__social-media_vk"
+            />
+          </a>
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            class="contacts__social-media"
+          >
+            <img
+              src="./assets/images/servicesImg/facebook.png"
+              alt="facebook"
+              class="contacts__social-media contacts__social-media_fb"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- основная часть - контакты-->
+      <div class="contacts__address">
+        <img
+          src="./assets/images/servicesImg/address.png"
+          alt="Адрес"
+          class="contacts__img-address"
+        />
+        <p class="contacts__capture contacts__capture_addres">Адрес</p>
+        <p class="contacts__description contacts__description_addres">
+          Пр-т Мангилик Ел, 55/21, эт. 1, оф. 164
+        </p>
+        <img
+          src="./assets/images/servicesImg/phone.png"
+          alt="Телефон"
+          class="contacts__img-phone"
+        />
+        <p class="contacts__capture contacts__capture_phone">
+          +7 (7172) 24 72 80
+        </p>
+        <p class="contacts__description contacts__description_phone">
+          с 9:00 до 18:00
+        </p>
+        <img
+          src="./assets/images/servicesImg/clock.png"
+          alt="Время работы"
+          class="contacts__img-time"
+        />
+        <p class="contacts__capture contacts__capture_time">График работы</p>
+        <p class="contacts__description contacts__description_time">
+          пн-вс (9:00-22:00)
+        </p>
+        <img
+          src="./assets/images/servicesImg/whatsapp.png"
+          alt="Whatsapp"
+          class="contacts__img-whatsapp"
+        />
+        <p class="contacts__capture contacts__capture_whatsapp">
+          +7 (7172) 24 72 80
+        </p>
+        <p class="contacts__description contacts__description_whatsapp">
+          Whatsapp
+        </p>
+      </div>
+    </main>
+
+    <!-- карта локация -->
+    <div class="location"></div>
+    <!-- Блок Остались вопросы ? -->
+    <div class="connectionblock">
+      <h2 id="gotoform">Остались вопросы ?</h2>
+      <div class="connectionblock__grid">
+        <div class="connectionblock__text">
+          <p>
+            Мinerals Operating – это молодая компания, которая оказывает услуги
+            в сфере недропользования на территории Казахстана. Мы одна из первых
+            компаний являющихся лицензированным консультантом в сфере
+            минеральных ресурсов (лицензия №AFSA-A-LA-2020-0004). Мinerals
+            Operating зарегистрирована
+          </p>
+          <p>
+            Мinerals Operating – это молодая компания, которая оказывает услуги
+            в сфере недропользования на территории Казахстана. Мы одна из первых
+            компаний являющихся
+          </p>
+        </div>
+        <p class="connectionblock__contacts">
+          Напишите нам
+          <a href="mailto:email.ru@mail.ru" class="blue-link"
+            >email.ru@mail.ru</a
+          >
+          <br />
+          или звоните
+          <a href="tel:+77005555566" class="blue-link">+7 (700) 555-55-66</a>
+        </p>
+
+        <!-- Блок Остались вопросы форма -->
+
+        <form class="connectionblock__form" id="idform">
+          <input type="text" placeholder="Ваше имя" />
+          <input type="tel" placeholder="Ваш телефон" />
+          <textarea class="textarea" placeholder="Сообщение"></textarea>
+        </form>
+        <div class="connectionblock__submit submit">
+          <button class="hard-btn submit__btn" type="submit" form="idform">
+            Оформить заявку
+          </button>
+          <p class="submit__text">
+            При нажатии кнопки “отправить”, вы соглашаетесь <br />на обработку
+            данных
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Футер-->
+    <footer class="footer-base">
+      <div class="footer__top">
+        <div class="footer__top_full">
+          <!-- Футер/блок с логотипом и описанием-->
+          <div class="footer__top_block1">
+            <div class="footer__top_block1_logo">
+              <img
+                src="./assets/images/homeImg/home_logo_black.svg"
+                class="home_logo_black_img"
+                alt="logo"
+              />
+            </div>
+            <div class="footer__top_block1_text">
+              Мinerals Operating – это молодая компания, которая оказывает
+              услуги в сфере недропользования на территории Казахстана. Мы одна
+              из первых компаний являющихся лицензированным консультантом в
+              сфере минеральных ресурсов (лицензия №AFSA-A-LA-2020-0004).
+            </div>
+          </div>
+          <!-- Футер/ с навигацией "Основное"-->
+          <div class="footer__top_block2">
+            <div class="footer__top_block2_text">Основное</div>
+            <div class="footer__top_block2_nav">
+              <a href="./home.html">Главная</a>
+              <a href="./about.html">О нас</a>
+              <a href="./services.html">Услуги</a>
+              <a href="./search.html">Вакансии</a>
+            </div>
+          </div>
+          <!-- Футер/Навигация-->
+          <div class="footer__top_block3">
+            <div class="footer__top_block3_text">Навигация</div>
+            <div class="footer__top_block3_nav">
+              <a href="./contacts.html">Контакты</a>
+              <a href="./search.html">Помощь</a>
+              <a href="./search.html">Политика</a>
+              <a href="./contacts.html">Обратная связь</a>
+            </div>
+          </div>
+
+          <!-- Футер/ контакты-->
+          <div class="footer__top_block4">
+            <div class="footer__top_block4_text">Контакты</div>
+            <div class="footer__top_block4_contacts">
+              <div class="footer__top_block4_adress">
+                РК, г. Нур-Султан, Проспект Мангилик Ел, 55/21, этаж 1, Блок
+                C4.2, офис 164
+              </div>
+              <!-- Футер/телефон-->
+              <div class="footer__top_block4_tel">
+                <div class="footer__top_block4_tel_logo">
+                  <img
+                    src="./assets/images/homeImg/footer_top_tel.png"
+                    class="footer_top_tel_img"
+                    alt="logo tel"
+                  />
+                </div>
+                <div class="footer__top_block4_tel_number">
+                  <a href="tel:+77172247280"> +7 (7172) 24 72 80</a>
+                </div>
+              </div>
+              <!-- Футер/социальные сети-->
+              <div class="footer__top_block4_media">
+                <div class="footer__top_block4_media_instagramm">
+                  <a href="https://www.instagram.com/"
+                    ><img
+                      src="./assets/images/homeImg/instagram.png"
+                      class="media_img"
+                      alt="logo instagram"
+                    />
+                  </a>
+                </div>
+                <div class="footer__top_block4_media_vk">
+                  <a href="https://www.vk.com/"
+                    ><img
+                      src="./assets/images/homeImg/vk.png"
+                      class="media_img"
+                      alt="logo vk"
+                  /></a>
+                </div>
+                <div class="footer__top_block4_media_facebook">
+                  <a href="https://www.facebook.com/"
+                    ><img
+                      src="./assets/images/homeImg/facebook.png"
+                      class="media_img"
+                      alt="logo facebook"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Футер//линия разделитель-->
+      <div>
+        <img
+          class="footer__line"
+          src="./assets/images/aboutImg/footer-line.png"
+          alt="..."
+        />
+      </div>
+      <!-- Футер//создатель сайта-->
+      <div class="footer__bottom">
+        <p>© 2021 Создание сайта maxico.kz</p>
+        <p>
+          Перепечатка и любое использование материалов возможно только при
+          наличии ссылки на первоисточник.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

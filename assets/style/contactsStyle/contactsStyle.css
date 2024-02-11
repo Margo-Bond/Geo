@@ -1,4 +1,508 @@
 @charset "UTF-8";
 /* Шапка */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 /* Контент */
-/* Подвал *//*# sourceMappingURL=contactsStyle.css.map */
+/* Подвал */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.header,
+.main {
+  background-color: rgb(241, 244, 248);
+}
+
+/* Header */
+.header {
+  height: 4vw;
+  color: rgb(255, 255, 255);
+}
+.header .header__top {
+  padding: 0 8%;
+  background: url(../../images/aboutImg/header-top-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+.header .header__top .header__top_full {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.header .header__top .header__top_full .header__top_logo {
+  display: flex;
+  align-items: center;
+  width: 10%;
+}
+.header .header__top .header__top_full .header__top_logo img {
+  width: 75%;
+}
+.header .header__top .header__top_full .header__top_menu {
+  display: flex;
+  margin-left: auto;
+  width: 60%;
+}
+.header .header__top .header__top_full .header__top_menu nav {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header__top .header__top_full .header__top_menu nav a {
+  text-decoration: none;
+  font: 0.8vw "Roboto", sans-serif;
+  color: rgb(255, 255, 255);
+  width: 5vw;
+  text-align: center;
+}
+.header .header__top .header__top_full .header__top_menu nav a:hover {
+  font-weight: 700;
+}
+.header .header__top .header__top_full .header__top_menu .header__top_left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  width: 45%;
+}
+.header .header__top .header__top_full .header__top_menu .header__top_left .contact_phone {
+  text-align: right;
+}
+.header .header__top .header__top_full .header__top_menu .header__top_left .contact_phone img {
+  display: inline-block;
+  width: 90%;
+}
+
+.header__top_languages {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.8vw;
+}
+.header__top_languages p {
+  margin: 0;
+}
+
+.choice {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  display: none;
+}
+
+.choice__list {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  list-style: none;
+  margin: 0;
+  top: calc(100% + 5px);
+  left: 0;
+  z-index: 1;
+}
+.choice__list li {
+  cursor: pointer;
+}
+
+.header__top_languages-choice {
+  cursor: pointer;
+}
+
+.dropdown-toggle:checked + .choice__list {
+  display: block;
+}
+
+/*Навигационная цепочка*/
+.header__link {
+  position: absolute;
+  z-index: 1;
+  top: 5.1vw;
+  left: 8%;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.52vw;
+  font-weight: 400;
+  font-size: 0.73vw;
+}
+.header__link a {
+  color: rgb(60, 60, 60);
+  opacity: 50%;
+  text-decoration: none;
+}
+.header__link p {
+  color: rgb(29, 128, 235);
+  margin: 0;
+}
+.header__link img {
+  width: 0.42vw;
+}
+
+/* основная часть - По всем вопросам */
+h2 {
+  font: 700 2.25vw "Roboto", sans-serif;
+  color: rgb(16, 36, 65);
+  margin-bottom: 1.5vw;
+}
+
+.blue-link {
+  font: inherit;
+  color: rgb(29, 128, 235);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contacts__email {
+  color: rgb(32, 62, 117);
+  text-decoration: none;
+}
+
+.main {
+  display: grid;
+  padding: 5% 8% 4%;
+}
+.main .email {
+  grid-area: 1/1/2/2;
+}
+
+/*соц сети*/
+.contacts__media {
+  display: flex;
+  width: 7vw;
+  justify-content: space-between;
+  align-items: center;
+}
+.contacts__media .contacts__social-media {
+  width: 1.51vw;
+  height: 1.51vw;
+}
+.contacts__media a:link {
+  filter: grayscale(100%);
+  opacity: 50%;
+}
+.contacts__media a:hover {
+  filter: grayscale(0%);
+  opacity: 100%;
+}
+
+/*<!-- основная часть - контакты-->*/
+.contacts__address {
+  grid-area: 1/2/2/3;
+  margin-left: 2.34vw;
+  display: grid;
+  grid-template-columns: 1vw 1.5fr 1vw 1fr;
+  grid-template-rows: 1.6vw 2vw 1.3vw 2vw;
+  gap: 0.3vw;
+}
+.contacts__address .contacts__capture {
+  color: rgb(16, 36, 65);
+  font-size: 1.1vw;
+  font-weight: 700;
+  line-height: 1.3vw;
+  display: grid;
+  align-content: end;
+}
+.contacts__address .contacts__description {
+  color: rgb(64, 82, 103);
+  font-size: 0.83vw;
+  font-weight: 400;
+  display: grid;
+  align-content: start;
+}
+.contacts__address .contacts__img-address {
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+  align-self: center;
+  height: 1.09vw;
+  width: 0.72vw;
+}
+.contacts__address .contacts__capture_addres {
+  grid-column: 2;
+  grid-row: 1;
+}
+.contacts__address .contacts__description_addres {
+  grid-column: 2;
+  grid-row: 2;
+}
+.contacts__address .contacts__img-phone {
+  grid-column: 3;
+  grid-row: 1;
+  display: grid;
+  align-self: center;
+  height: 1.09vw;
+  width: 0.79vw;
+}
+.contacts__address .contacts__capture_phone {
+  grid-column: 4;
+  grid-row: 1;
+}
+.contacts__address .contacts__description_phone {
+  grid-column: 4;
+  grid-row: 2;
+}
+.contacts__address .contacts__img-time {
+  grid-column: 1;
+  grid-row: 3;
+  display: grid;
+  align-self: center;
+  height: 0.88vw;
+  width: 0.88vw;
+}
+.contacts__address .contacts__capture_time {
+  grid-column: 2;
+  grid-row: 3;
+}
+.contacts__address .contacts__description_time {
+  grid-column: 2;
+  grid-row: 4;
+}
+.contacts__address .contacts__img-whatsapp {
+  grid-column: 3;
+  grid-row: 3;
+  display: grid;
+  align-self: center;
+  height: 0.88vw;
+  width: 0.88vw;
+}
+.contacts__address .contacts__capture_whatsapp {
+  grid-column: 4;
+  grid-row: 3;
+}
+.contacts__address .contacts__description_whatsapp {
+  grid-column: 4;
+  grid-row: 4;
+}
+
+/* Карта локация */
+.location {
+  background-image: url(../../images/contactsImg/location1.png);
+  height: 29vw;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+/* Блок Остались вопросы? */
+.connectionblock {
+  padding: 4% 8%;
+  /* форма обратной связи в Блок Остались вопросы?  */
+}
+.connectionblock .connectionblock__grid {
+  display: grid;
+  grid-template: min-content max-content/1.1fr 0.9fr;
+  gap: 10% 2%;
+}
+.connectionblock .connectionblock__text {
+  grid-area: 1/1/2/2;
+  font: 400 1vw "Roboto", sans-serif;
+  line-height: 1.5vw;
+  color: rgb(64, 82, 103);
+}
+.connectionblock .connectionblock__text p:first-child {
+  margin-bottom: 2vw;
+}
+.connectionblock .connectionblock__contacts {
+  grid-area: 2/1/3/2;
+  margin: 0px;
+  font: 400 1vw "Roboto", sans-serif;
+  color: rgb(20, 20, 20);
+  line-height: 1.5vw;
+}
+.connectionblock .connectionblock__form {
+  grid-area: 1/2/2/3;
+  display: grid;
+  grid-template: 1fr 3fr/1fr 1fr;
+  gap: 10px;
+}
+.connectionblock .connectionblock__submit {
+  grid-area: 2/2/3/3;
+  display: flex;
+  align-items: center;
+}
+.connectionblock .connectionblock__submit .submit__text {
+  font: 400 0.8vw "Roboto", sans-serif;
+  color: rgb(64, 82, 103);
+  margin-left: 1.5vw;
+}
+
+input {
+  background-color: rgb(227, 234, 242);
+  font: 400 1vw "Roboto", sans-serif;
+  color: rgb(64, 82, 103);
+  border: none;
+  padding: 10px;
+}
+
+textarea {
+  grid-area: 2/1/3/3;
+  background-color: rgb(227, 234, 242);
+  font: 400 1vw "Roboto", sans-serif;
+  color: rgb(64, 82, 103);
+  border: none;
+  padding: 10px;
+  resize: none;
+}
+
+/* Синяя кнопка в Блок Остались вопросы?  */
+.submit__btn {
+  background-color: rgb(32, 62, 117);
+  color: white;
+  font: 700 calc(5px + 0.7vw) "Roboto", sans-serif;
+  height: 3vw;
+  width: 11vw;
+  min-height: 28px;
+  min-width: 107px;
+  border: none;
+  cursor: pointer;
+}
+
+.footer-base {
+  background-color: rgb(28, 30, 33);
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.footer__top {
+  color: white;
+  width: 100%;
+  height: 20vw;
+  display: flex;
+  justify-content: center;
+  padding-top: 3vw;
+  padding-bottom: 1vw;
+}
+.footer__top .footer__top_full {
+  color: white;
+  width: 85vw;
+  font: 0.9vw "Roboto", sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__top .footer__top_full .footer__top_block1 {
+  width: 23vw;
+}
+.footer__top .footer__top_full .footer__top_block1 .footer__top_block1_logo {
+  height: 4vw;
+  top: -16px;
+}
+.footer__top .footer__top_full .footer__top_block1 .footer__top_block1_logo .home_logo_black_img {
+  width: 8vw;
+}
+.footer__top .footer__top_full .footer__top_block1 .footer__top_block1_text {
+  height: 9vw;
+  line-height: 1.5vw;
+}
+.footer__top .footer__top_full .footer__top_block2 .footer__top_block2_text {
+  height: 4vw;
+  font-weight: 700;
+  padding-top: 0.7vw;
+  font-size: 1.14vw;
+}
+.footer__top .footer__top_full .footer__top_block2 .footer__top_block2_nav {
+  padding: 0;
+  width: 4vw;
+  height: 9vw;
+  line-height: 2.3vw;
+  font-weight: 400;
+}
+.footer__top .footer__top_full .footer__top_block2 .footer__top_block2_nav a {
+  color: white;
+  text-decoration: none;
+}
+.footer__top .footer__top_full .footer__top_block2 .footer__top_block2_nav a:hover {
+  font-weight: 700;
+}
+.footer__top .footer__top_full .footer__top_block3 .footer__top_block3_text {
+  height: 4vw;
+  font-weight: 700;
+  padding-top: 0.7vw;
+  font-size: 1.14vw;
+}
+.footer__top .footer__top_full .footer__top_block3 .footer__top_block3_nav {
+  line-height: 2.3vw;
+  width: 7vw;
+  height: 9vw;
+}
+.footer__top .footer__top_full .footer__top_block3 .footer__top_block3_nav a {
+  color: white;
+  text-decoration: none;
+}
+.footer__top .footer__top_full .footer__top_block3 .footer__top_block3_nav a:hover {
+  font-weight: 700;
+}
+.footer__top .footer__top_full .footer__top_block4 .footer__top_block4_text {
+  height: 4vw;
+  font-weight: 700;
+  padding-top: 0.7vw;
+  font-size: 1.14vw;
+}
+.footer__top .footer__top_full .footer__top_block4 .footer__top_block4_contacts {
+  display: flex;
+  flex-direction: column;
+  width: 23vw;
+  gap: 1.5vw;
+}
+.footer__top .footer__top_full .footer__top_block4 .footer__top_block4_contacts .footer__top_block4_tel {
+  display: flex;
+}
+.footer__top .footer__top_full .footer__top_block4 .footer__top_block4_contacts .footer__top_block4_tel .footer_top_tel_img {
+  width: 0.9vw;
+}
+.footer__top .footer__top_full .footer__top_block4 .footer__top_block4_contacts .footer__top_block4_tel .footer__top_block4_tel_number {
+  padding-left: 0.5vw;
+}
+.footer__top .footer__top_full .footer__top_block4 .footer__top_block4_contacts .footer__top_block4_tel .footer__top_block4_tel_number a {
+  color: white;
+  text-decoration: none;
+}
+.footer__top .footer__top_full .footer__top_block4 .footer__top_block4_contacts .footer__top_block4_media {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+.footer__top .footer__top_full .footer__top_block4 .footer__top_block4_contacts .footer__top_block4_media .media_img {
+  width: 1.51vw;
+  height: 1.51vw;
+  padding-right: 5%;
+}
+.footer__top .footer__top_full .footer__top_block4 .footer__top_block4_contacts .footer__top_block4_media a:link {
+  filter: grayscale(100%);
+  opacity: 50%;
+}
+.footer__top .footer__top_full .footer__top_block4 .footer__top_block4_contacts .footer__top_block4_media a:hover {
+  filter: grayscale(0%);
+  opacity: 100%;
+}
+
+.footer__line {
+  display: block;
+  margin: 0 auto;
+  width: 67%;
+  height: 1px;
+}
+
+.footer__bottom {
+  background-color: rgb(28, 30, 33);
+  color: white;
+  width: 100%;
+  height: 5vw;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 1vw;
+  font: 0.9vw "Roboto", sans-serif;
+}
+.footer__bottom p:first-child {
+  margin-bottom: 0.4vw;
+}/*# sourceMappingURL=contactsStyle.css.map */
