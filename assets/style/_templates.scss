@@ -1,14 +1,53 @@
-/* Шапка */
-%header__top {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-%header__bottom {
+@mixin image($position) {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: $position;
 }
-
-/* Контент */
-%btn {
+@mixin blue-button($background-color, $color) {
+  height: 2.91vw;
+  cursor: pointer;
+  border: none;
+  font-size: 0.94vw;
+  text-decoration: none;
+  text-align: center;
+  line-height: 2.91vw;
+  font-weight: 700;
+  background-color: $background-color;
+  color: $color;
 }
-
-/* Подвал */
-%footer {
+@mixin main-text {
+  font-weight: 400;
+  font-size: 1vw;
+  line-height: 1.43vw;
+  color: rgb(64, 82, 103);
+}
+@mixin h2 {
+  font-size: 2.3vw;
+  color: rgb(16, 36, 65);
+  line-height: 2.31vw;
+  font-weight: 700;
+}
+%advantages__img {
+  height: 1.79vw;
+  width: 1.77vw;
+}
+%advantages__title {
+  display: grid;
+  align-content: center;
+  font-size: 1vw;
+  font-weight: 700;
+  line-height: 1.3vw;
+  color: rgb(32, 62, 117);
+}
+@mixin advantages__text {
+  display: grid;
+  font-size: 0.93vw;
+  font-weight: 400;
+  line-height: 1.35vw;
+  color: rgb(64, 82, 103);
 }

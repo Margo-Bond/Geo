@@ -5,232 +5,252 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/style/normalize.css" />
     <link rel="stylesheet" href="./assets/style/homeStyle/homeStyle.css" />
-
     <title>Minerals operating</title>
-  </head>
 
+    <script src="./assets/style/homeStyle/select_lang.js"></script>
+  </head>
+  <script type="text/javascript" lang="javascript">
+    function cleanSelect(select) {
+      return $(select)
+        .removeClass("language-rus")
+        .removeClass("language-kaz")
+        .removeClass("language-angl");
+    }
+    function formSelect() {
+      var select = cleanSelect(".select-events");
+      if (select.val() == "1") select.addClass("language-rus");
+      if (select.val() == "2") select.addClass("language-kaz");
+      if (select.val() == "3") select.addClass("language-angl");
+      select.css({ height: "auto", overflow: "hidden", zIndex: "40000" });
+      select.on("mouseleave", function () {
+        this.size = 1;
+        if ($(this).val() == "1") cleanSelect(this).addClass("language-rus");
+        if ($(this).val() == "2") cleanSelect(this).addClass("language-kaz");
+        if ($(this).val() == "3") cleanSelect(this).addClass("language-angl");
+      });
+      select.on("mouseover", function () {
+        cleanSelect(this);
+        this.size = $(this).find("option").length;
+      });
+    }
+    $(function () {
+      formSelect();
+    });
+  </script>
   <body>
-    <!--Блок котировок-->
-    <div class="quotes_fon">
-      <div class="quotes_all">
+    <div class="quotesfon">
+      <div class="quotesall">
         <div class="quotes">
           <a href="https://ru.investing.com/commodities/gold"> Gold</a>
-          <div class="color_green">243.49$</div>
+          <div class="color color_green">243.49$</div>
         </div>
         <div class="quotes">
           <a href="https://ru.investing.com/commodities/gold"> Copper</a>
-          <div class="color_red">243.49$</div>
+          <div class="color color_red">243.49$</div>
         </div>
         <div class="quotes">
           <a href="https://ru.investing.com/commodities/gold"> Gore</a>
-          <div class="color_green">243.49$</div>
+          <div class="color color_green">243.49$</div>
         </div>
         <div class="quotes">
           <a href="https://ru.investing.com/commodities/nickel?cid=959208">
             Nickel</a
           >
-          <div class="color_red">243.49$</div>
+          <div class="color color_red">243.49$</div>
         </div>
         <div class="quotes">
           <a
-            href="https://ru.investing.com/commodities/iron-ore-62-cfr-contracts">
+            href="https://ru.investing.com/commodities/iron-ore-62-cfr-contracts"
+          >
             Iron</a
           >
-          <div class="color_green">243.49$</div>
+          <div class="color color_green">243.49$</div>
         </div>
         <div class="quotes">
           <a href="https://ru.investing.com/commodities/gold"> Lithium</a>
-          <div class="color_red">243.49$</div>
+          <div class="color color_red">243.49$</div>
         </div>
       </div>
     </div>
-
     <header class="header">
-      <!-- Хедер топ / class="header__top создан для фона на главной он синий, в остальных рисунок-->
       <div class="header__top">
-        <div class="header__top_full">
-          <div class="header__top_logo">
-            <img
-              src="./assets/images/homeImg/home_logo.svg"
-              class="home_logo_img"
-              alt="logo" />
+        <div class="header__logo">
+          <img
+            src="./assets/images/homeImg/home_logo.svg"
+            class="header__logo-img"
+            alt="логотип"
+          />
+        </div>
+        <nav class="header__menu">
+          <a href="./home.html">Главная</a>
+          <a href="./about.html">О компании</a>
+          <a href="./services.html">Услуги</a>
+          <a href="./news.html">Новости</a>
+          <a href="./contacts.html">Контакты</a>
+        </nav>
+
+        <div class="header__center">
+          <div class="contact-email">
+            <a href="mailto:info@moperating.kz"
+              ><img
+                src="./assets/images/homeImg/home_top_email.svg"
+                class="header__img-mail"
+                alt="Электронная пота"
+            /></a>
           </div>
-          <!-- Хедер топ / навигация-->
-          <div class="header__top_menu">
-            <nav>
-              <a href="./home.html">Главная</a>
-              <a href="./about.html">О компании</a>
-              <a href="./services.html">Услуги</a>
-              <a href="./news.html">Новости</a>
-              <a href="./contacts.html">Контакты</a>
-            </nav>
-            <div class="header__top_left">
-              <!-- Хедер топ /  почта-->
-              <div class="contact_email">
-                <a href="mailto:info@moperating.kz"
-                  ><img
-                    src="./assets/images/homeImg/home_top_email.svg"
-                    class="contact_email_img"
-                    alt="Электронная пота"
-                /></a>
-              </div>
-              <!-- Хедер топ /  телефон-->
-              <div class="contact_phone">
-                <a href="tel:+77172247280"
-                  ><img
-                    src="./assets/images/homeImg/home_top_tel.svg"
-                    class="contact_email_img"
-                    alt="Телефон"
-                /></a>
-              </div>
-              <!-- Хедер топ /  разделитель-->
-              <div class="header__top_lupa_stick">
-                <img
-                  src="./assets/images/homeImg/home_top_lupa_stick.svg"
-                  class="header__top_lupa_stick_img" />
-              </div>
-              <!-- Хедер топ /  лупа для поиска-->
-              <div class="header__top_lupa">
-                <a href="./search.html"
-                  ><img
-                    src="./assets/images/homeImg/home_top_lupa.svg"
-                    class="header__top_lupa_img"
-                    alt="Поиск"
-                /></a>
-              </div>
-              <!-- Хедер топ /  селектор языков-->
-              <div class="header__top_languages">
-                <select name="languages">
-                  <option value="1" class="language_kaz">Казахский</option>
-                  <option value="2" class="language_angl">Английский</option>
-                  <option value="3" class="language_rus" selected>
-                    Русский
-                  </option>
-                </select>
-              </div>
-            </div>
+          <div class="contact-phone">
+            <a href="tel:+77172247280"
+              ><img
+                src="./assets/images/homeImg/home_top_tel.svg"
+                class="header__img"
+                alt="Телефон"
+            /></a>
+          </div>
+          <div class="header__lupa-stick">
+            <img
+              src="./assets/images/homeImg/home_top_lupa_stick.svg"
+              class="header__lupastickimg"
+            />
+          </div>
+          <div class="header__lupa">
+            <a href="./search.html"
+              ><img
+                src="./assets/images/homeImg/home_top_lupa.svg"
+                class="header__lupaimg"
+                alt="Поиск"
+            /></a>
           </div>
         </div>
+        <div class="header__languages">
+          <select class="select-events">
+            <option value="1" class="language-rus">Русский</option>
+            <option value="2" class="language-kaz">Казахский</option>
+            <option value="3" class="language-angl">Английский</option>
+          </select>
+        </div>
       </div>
-    </header>
-    <!--Первая страница-->
-    <div class="header__bottom_fon">
+      <nav class="header__menu-1">
+        <a href="./home.html">Главная</a>
+        <a href="./about.html">О компании</a>
+        <a href="./services.html">Услуги</a>
+        <a href="./news.html">Новости</a>
+        <a href="./contacts.html">Контакты</a>
+      </nav>
       <div class="header__bottom">
-        <div class="header__bottom_description">
-          <div class="header__bottom_description_text1">
+        <div class="header__description">
+          <div class="header__description-text1">
             Оказание полного спектра услуг в области недропользования
           </div>
-          <div class="header__bottom_description_text2">
+          <div class="header__description-text2">
             МФЦА – это уникальный центр, который использует лучшие практики и
             подходы международных финансовых центров и сотрудничает с крупными
             корпорациями и небольшими компаниями, недавно появившимися на рынке.
           </div>
-          <div class="header__bottom_advanteges">
-            <div class="header__bottom_advanteges1">
+          <div class="header__advanteges">
+            <div class="header__advanteges-card">
               Наличие опытных специалистов
             </div>
-            <div class="header__bottom_advanteges1">
+            <div class="header__advanteges-card">
               Современные методы в геологоразведке
             </div>
-            <div class="header__bottom_advanteges1">
-              Налаженная сеть партнеров
-            </div>
-            <div class="header__bottom_advanteges1">
+            <div class="header__advanteges-card">Налаженная сеть партнеров</div>
+            <div class="header__advanteges-card">
               Постоянный контроль качества
             </div>
           </div>
-          <div class="header__bottom___button5">
-            <a href="" class="header__bottom___button">Оформить заявку</a>
-          </div>
+          <a href="home.html#gotoform" class="header__button"
+            >Оформить заявку</a
+          >
         </div>
-        <div class="header__bottom_video">
-          <iframe
-            src="https://www.youtube.com/embed/5f1gcyd-F24?si=qPnyceWHEJRq6hNm"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-            class="header__bottom_video_youtube"></iframe>
+        <div class="header__bottom-video">
+          <video
+            src="./assets/images/homeImg/RCdrilling.mp4"
+            controls="controls"
+            autoplay="autoplay"
+            preload="auto"
+            poster="./assets/images/homeImg/Drillingpng.png"
+            class="video-youtube"
+          ></video>
+        </div>
+      </div>
+    </header>
+    <div class="home-pagetwo">
+      <div class="home-pagetwo__img">
+        <img src="./assets/images/homeImg/home_crystal.svg" alt="Кристалл" />
+      </div>
+      <div class="home-pagetwo__description">
+        <div class="home-pagetwo__text1">О компании</div>
+        <div class="home-pagetwo__text2">
+          Мы хотим создать историю и стать полезными для нашей страны. Именно
+          так мы думали когда основали нашу компанию Minerals Operating. Даже
+          стало интересно что у нас получится, но мы уже сейчас проделали
+          огромную работу, вышли на международный уровень. Каждый из нас
+          работает над своей стезей, основываясь на навыках и опыте в нашей
+          сфере. Не зря говорят, что большая история или идея создаются сидя за
+          чашкой чая, в принципе так же было и у нас. У каждого есть своя
+          история.
+        </div>
+        <div class="home-pagetwo__text2">
+          Самое интересное то, что наша история началась тогда, когда мы даже об
+          этом не знали ведь мы были знакомы давно и никто не думал, что
+          знакомство бывают не напрасными. И в один момент когда у одного
+          родилась идея мы просто послушали, но как говорил И. Гёте «Можно
+          признать идею полезной, но не уметь ею пользоваться». И при каждой
+          очередной встрече мы действительно увидели потенциал и на сколько
+          ресурсным может быть данный проект. Мы поверили в него, в друг друга и
+          самое важное на сколько полезен он может быть для нашей страны.
+          Приятно было осознавать, что ничто не делает человека столь склонным
+          к рискованным предприятиям, как ощущение невесомости действий в нашей
+          голове.
         </div>
       </div>
     </div>
-    <!--Вторая  страница-->
-    <div class="home_page_two_fon">
-      <div class="home_page_two">
-        <div class="home_page_two_img">
-          <img src="./assets/images/homeImg/home_crystal.svg" alt="Кристалл" />
-        </div>
-        <div class="home_page_two_description">
-          <div class="home_page_two_description_text1">О компании</div>
-          <div class="home_page_two_description_text2">
-            Мы хотим создать историю и стать полезными для нашей страны. Именно
-            так мы думали когда основали нашу компанию Minerals Operating. Даже
-            стало интересно что у нас получится, но мы уже сейчас проделали
-            огромную работу, вышли на международный уровень. Каждый из нас
-            работает над своей стезей, основываясь на навыках и опыте в нашей
-            сфере. Не зря говорят, что большая история или идея создаются сидя
-            за чашкой чая, в принципе так же было и у нас. У каждого есть своя
-            история.
-          </div>
-          <div class="home_page_two_description_text2">
-            Самое интересное то, что наша история началась тогда, когда мы даже
-            об этом не знали ведь мы были знакомы давно и никто не думал, что
-            знакомство бывают не напрасными. И в один момент когда у одного
-            родилась идея мы просто послушали, но как говорил И. Гёте «Можно
-            признать идею полезной, но не уметь ею пользоваться». И при каждой
-            очередной встрече мы действительно увидели потенциал и на сколько
-            ресурсным может быть данный проект. Мы поверили в него, в друг друга
-            и самое важное на сколько полезен он может быть для нашей страны.
-            Приятно было осознавать, что ничто не делает человека столь склонным
-            к рискованным предприятиям, как ощущение невесомости действий в
-            нашей голове.
-          </div>
-        </div>
+    <div class="home-pagethree">
+      <div class="home-pagethree__picture home-pagethree__picture-1">
+        <img
+          src="./assets/images/homeImg/home_picture1.png"
+          alt="Фото"
+          class="home-pagethree__img home-pagethree__img-1"
+        />
+      </div>
+      <div class="home-pagethree__picture home-pagethree__picture-2">
+        <img
+          src="./assets/images/homeImg/home_picture2.png"
+          alt="Фото"
+          class="home-pagethree__img home-pagethree__img-2"
+        />
+      </div>
+      <div class="home-pagethree__picture home-pagethree__picture-3">
+        <img
+          src="./assets/images/homeImg/home_picture3.png"
+          alt="Фото"
+          class="home-pagethree__img home-pagethree__img-3"
+        />
+      </div>
+      <div class="home-pagethree__name home-pagethree__name-1">
+        Ким Александр
+      </div>
+      <div class="home-pagethree__name home-pagethree__name-2">
+        Ким Александр
+      </div>
+      <div class="home-pagethree__name home-pagethree__name-3">
+        Ким Александр
+      </div>
+      <div class="home-pagethree__about home-pagethree__about-1">
+        Мinerals Operating – это молодая компания, которая оказывает услуги в
+        сфере недропользования на...
+      </div>
+      <div class="home-pagethree__about home-pagethree__about-2">
+        Мinerals Operating – это молодая компания, которая оказывает услуги в
+        сфере недропользования на...
+      </div>
+      <div class="home-pagethree__about home-pagethree__about-3">
+        Мinerals Operating – это молодая компания, которая оказывает услуги в
+        сфере недропользования на...
       </div>
     </div>
-    <!--Третья  страница лица-->
-    <div class="home_page_three_fon">
-      <div class="home_page_three">
-        <div class="home_page_three_picture">
-          <img
-            src="./assets/images/homeImg/home_picture1.svg"
-            alt="Фото"
-            class="home_page_three_img" />
-        </div>
-        <div class="home_page_three_picture">
-          <img
-            src="./assets/images/homeImg/home_picture2.svg"
-            alt="Фото"
-            class="home_page_three_img" />
-        </div>
-        <div class="home_page_three_picture">
-          <img
-            src="./assets/images/homeImg/home_picture3.svg"
-            alt="Фото"
-            class="home_page_three_img" />
-        </div>
-        <div class="home_page_three_name">Ким Александр</div>
-        <div class="home_page_three_name">Ким Александр</div>
-        <div class="home_page_three_name">Ким Александр</div>
-        <div class="home_page_three_about">
-          Мinerals Operating – это молодая компания, которая оказывает услуги в
-          сфере недропользования на...
-        </div>
-        <div class="home_page_three_about">
-          Мinerals Operating – это молодая компания, которая оказывает услуги в
-          сфере недропользования на...
-        </div>
-        <div class="home_page_three_about">
-          Мinerals Operating – это молодая компания, которая оказывает услуги в
-          сфере недропользования на...
-        </div>
-      </div>
-    </div>
-
-    <div class="ourprinciples">Принцип нашей работы</div>
-
-    <main class="gallery">
-      <!--Буровые работы-->
+    <h3 class="ourprinciples">Принцип нашей работы</h3>
+    <div class="gallery">
       <div class="gallery__card gallery__card_without-bg">
         <div class="gallery__image gallery__image_drilling"></div>
         <div class="gallery__service">
@@ -252,7 +272,6 @@
           >
         </div>
       </div>
-      <!--Геологоразведочные работы-->
       <div class="gallery__card gallery__card">
         <div class="gallery__service">
           <div class="gallery__title">Геологоразведочные работы</div>
@@ -261,7 +280,7 @@
             в сфере недропользования на территории Казахстана. Мы одна из первых
             компаний являющихся лицензированным консультантом в сфере
             минеральных ресурсов (лицензия №AFSA-A-LA-2020-0004). Мinerals
-            Operating зарегистрирована в Международном Финансовом Центре
+            Operating зарегистрирована в Международном Финансовом ЦентреP
             «Астана» (МФЦА) и осуществляет деятельность, основанную на нормах и
             принципах Английского общего права. МФЦА – это уникальный центр,
             который использует лучшие практики и подходы международных
@@ -272,7 +291,6 @@
         </div>
         <div class="gallery__image gallery__image_geological"></div>
       </div>
-      <!--Научно-исследовательские работы-->
       <div class="gallery__card gallery__card">
         <div class="gallery__image gallery__image_research"></div>
         <div class="gallery__service">
@@ -292,308 +310,292 @@
           <a href="" class="gallery__button">Подробнее об услуге</a>
         </div>
       </div>
-      <!-- Почему? -->
-      <div class="why_fon">
-        <div class="why">
-          <h2 class="why__title">ПОЧЕМУ MINERALS OPERATING?</h2>
-          <div class="why_wrap">
-            <!-- Клиентоориентированность-->
-            <div class="why_item why_item">
-              <img
-                src="./assets/images/homeImg/employee.svg"
-                alt="Работник"
-                class="why_wrap_img" />
-              <h6>Клиентоориентированность</h6>
-              <p>
-                Мы понимаем как тяжело начинать как делать помогаем новичкам
-              </p>
-            </div>
-            <!-- Качественные услуги -->
-            <div class="why_item why_item">
-              <img
-                src="./assets/images/homeImg/innovation_home.svg"
-                alt="Идея"
-                class="why_wrap_img" />
-              <h6>Предоставлениекачественных услуг</h6>
-              <p>
-                Мы понимаем как тяжело начинать как делать помогаем новичкам
-              </p>
-            </div>
-            <!-- Развитие бизнеса-->
-            <div class="why_item why_item">
-              <img
-                src="./assets/images/homeImg/increase_home.svg"
-                alt="Успех"
-                class="why_wrap_img" />
-              <h6>Развитие бизнеса</h6>
-              <p>
-                Мы понимаем как тяжело начинать как делать помогаем новичкам
-              </p>
-            </div>
-            <!-- Конфиденциальность-->
-            <div class="why_item why_item">
-              <img
-                src="./assets/images/homeImg/vision_home.svg"
-                alt="Конфиденциальность"
-                class="why_wrap_img" />
-              <h6>Конфиденциальность</h6>
-              <p>
-                Мы понимаем как тяжело начинать как делать помогаем новичкам
-              </p>
-            </div>
-            <!-- Грамотный подход-->
-            <div class="why_item why_item">
-              <img
-                src="./assets/images/homeImg/search_home.svg"
-                alt="График"
-                class="why_wrap_img" />
-              <h6>Грамотный подход</h6>
-              <p>
-                Мы понимаем как тяжело начинать как делать помогаем новичкам
-              </p>
-            </div>
-            <!-- Карта-->
-            <div class="why_item why_item_map">
-              <img
-                src="./assets/images/homeImg/map_home.svg"
-                alt="Карта"
-                class="why_item_6_img" />
-            </div>
-          </div>
+    </div>
+    <div class="why">
+      <h2 class="why__title">ПОЧЕМУ MINERALS OPERATING?</h2>
+      <div class="why__wrap">
+        <div class="why__item">
+          <img
+            src="./assets/images/homeImg/employee.svg"
+            alt="Работник"
+            class="why__wrap-img"
+          />
+          <h6 class="why__text1">Клиентоориентированность</h6>
+          <p class="why__text2">
+            Мы понимаем как тяжело начинать как делать помогаем новичкам
+          </p>
+        </div>
+        <div class="why__item">
+          <img
+            src="./assets/images/homeImg/innovation_home.svg"
+            alt="Идея"
+            class="why__wrap-img"
+          />
+          <h6>Предоставление качественных услуг</h6>
+          <p>Мы понимаем как тяжело начинать как делать помогаем новичкам</p>
+        </div>
+        <div class="why__item">
+          <img
+            src="./assets/images/homeImg/increase_home.svg"
+            alt="Успех"
+            class="why__wrap-img"
+          />
+          <h6>Развитие бизнеса</h6>
+          <p>Мы понимаем как тяжело начинать как делать помогаем новичкам</p>
+        </div>
+        <div class="why__item">
+          <img
+            src="./assets/images/homeImg/vision_home.svg"
+            alt="Конфиденциальность"
+            class="why__wrap-img"
+          />
+          <h6>Конфиденциальность</h6>
+          <p>Мы понимаем как тяжело начинать как делать помогаем новичкам</p>
+        </div>
+        <div class="why__item">
+          <img
+            src="./assets/images/homeImg/search_home.svg"
+            alt="График"
+            class="why__wrap-img"
+          />
+          <h6>Грамотный подход</h6>
+          <p>Мы понимаем как тяжело начинать как делать помогаем новичкам</p>
+        </div>
+        <div class="why__item">
+          <img
+            src="./assets/images/homeImg/map_home.png"
+            alt="Карта"
+            class="why__wrap-img6"
+          />
         </div>
       </div>
-
-      <!--Карта с контактами-->
-      <div class="location">
-        <div class="contacts">
-          <div class="contacts__title">
-            <div class="contacts__questions">По всем вопросам</div>
-            <a href="mailto:info@moperating.kz" class="contacts__email"
-              >info@moperating.kz</a
+    </div>
+    <div class="location">
+      <div class="contacts">
+        <div class="contacts__title">
+          <div class="contacts__questions">По всем вопросам</div>
+          <a href="mailto:info@moperating.kz" class="contacts__email"
+            >info@moperating.kz</a
+          >
+        </div>
+        <div class="contacts__address">
+          <img
+            src="./assets/images/homeImg/address_home.svg"
+            alt="Адрес"
+            class="contacts__img-address"
+          />
+          <p class="contacts__capture contacts__capture_addres">Адрес</p>
+          <p class="contacts__description contacts__description_addres">
+            РК, г. Нур-Султан, Проспект Мангилик Ел, 55/21, этаж 1, Блок C4.2,
+            офис 164
+          </p>
+          <img
+            src="./assets/images/homeImg/phone_home.svg"
+            alt="Телефон"
+            class="contacts__img-phone"
+          />
+          <p class="contacts__capture contacts__capture_phone">
+            +7 (7172) 24 72 80
+          </p>
+          <p class="contacts__description contacts__description_phone">
+            с 9:00 до 18:00
+          </p>
+          <img
+            src="./assets/images/homeImg/clock_home.svg"
+            alt="Время работы"
+            class="contacts__img-time"
+          />
+          <p class="contacts__capture contacts__capture_time">График работы</p>
+          <p class="contacts__description contacts__description_time">
+            пн-вс (9:00-22:00)
+          </p>
+          <img
+            src="./assets/images/servicesImg/whatsapp.png"
+            alt="Whatsapp"
+            class="contacts__img-whatsapp"
+          />
+          <p class="contacts__capture contacts__capture_whatsapp">
+            +7 (7172) 24 72 80
+          </p>
+          <p class="contacts__description contacts__description_whatsapp">
+            Whatsapp
+          </p>
+        </div>
+        <div class="contacts__footer">
+          <div class="contacts__media">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              class="contacts__social-media"
             >
+              <img
+                src="./assets/images/servicesImg/instagram.png"
+                alt="Инстаграм"
+                class="contacts__social-media contacts__social-media_inst"
+              />
+            </a>
+            <a
+              href="https://www.vk.com/"
+              target="_blank"
+              class="contacts__social-media"
+            >
+              <img
+                src="./assets/images/servicesImg/vk.png"
+                alt="ВКонтакте"
+                class="contacts__social-media contacts__social-media_vk"
+              />
+            </a>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              class="contacts__social-media"
+            >
+              <img
+                src="./assets/images/servicesImg/facebook.png"
+                alt="Фейсбук"
+                class="contacts__social-media contacts__social-media_fb"
+              />
+            </a>
           </div>
-          <div class="contacts__address">
+          <a href="./contacts.html" target="_blank" class="contacts__button">
+            Оформить заявку</a
+          >
+        </div>
+      </div>
+      <script
+        type="text/javascript"
+        charset="utf-8"
+        async
+        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac56ac1e82d1e6d36f59800a8d5cbe77d1c0c234d755feaaea16d10b1cbc7d466&amp;width=100%&amp;lang=ru_RU&amp;scroll=true"
+      ></script>
+    </div>
+    <div class="connectionblock">
+      <h2 id="gotoform">Остались вопросы ?</h2>
+      <div class="connectionblock__grid">
+        <div class="connectionblock__text">
+          <p>
+            Мinerals Operating – это молодая компания, которая оказывает услуги
+            в сфере недропользования на территории Казахстана. Мы одна из первых
+            компаний являющихся лицензированным консультантом в сфере
+            минеральных ресурсов (лицензия №AFSA-A-LA-2020-0004). Мinerals
+            Operating зарегистрирована
+          </p>
+          <p>
+            Мinerals Operating – это молодая компания, которая оказывает услуги
+            в сфере недропользования на территории Казахстана. Мы одна из первых
+            компаний являющихся
+          </p>
+        </div>
+        <p class="connectionblock__contacts">
+          Напишите нам <a href="#" class="blue-link">email.ru@mail.ru</a>
+          <br />
+          или звоните <a href="#" class="blue-link">+7 (700) 555-55-66</a>
+        </p>
+        <form class="connectionblock__form" id="idform">
+          <input type="text" placeholder="Ваше имя" />
+          <input type="tel" placeholder="Ваш телефон" />
+          <textarea
+            class="textarea"
+            type="text"
+            placeholder="Сообщение"
+          ></textarea>
+        </form>
+        <div class="connectionblock__submit">
+          <button class="hard-btn submit__btn" type="submit" form="idform">
+            Оформить заявку
+          </button>
+          <p class="submit__text">
+            При нажатии кнопки “отправить”, вы соглашаетесь на обработку данных
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__top__block1">
+          <div class="block1__logo">
             <img
-              src="./assets/images/homeImg/address_home.svg"
-              alt="Адрес"
-              class="contacts__img-address" />
-            <p class="contacts__capture contacts__capture_addres">Адрес</p>
-            <p class="contacts__description contacts__description_addres">
+              src="./assets/images/homeImg/home_logo_black.svg"
+              class="homelogoblackimg"
+              alt="Логотип"
+            />
+          </div>
+          <div class="block1__text">
+            Мinerals Operating – это молодая компания, которая оказывает услуги
+            в сфере недропользования на территории Казахстана. Мы одна из первых
+            компаний являющихся лицензированным консультантом в сфере
+            минеральных ресурсов (лицензия №AFSA-A-LA-2020-0004).
+          </div>
+        </div>
+        <div class="footer__top__block2">
+          <div class="block2__text">Основное</div>
+          <div class="block2__nav">
+            <a href="./home.html">Главная</a>
+            <a href="./about.html">О нас</a>
+            <a href="./services.html">Услуги</a>
+            <a href="./search.html">Вакансии</a>
+          </div>
+        </div>
+        <div class="footer__top__block3">
+          <div class="block3__text">Навигация</div>
+          <div class="block3__nav">
+            <a href="./contacts.html">Контакты</a>
+            <a href="./search.html">Помощь</a>
+            <a href="#">Политика</a>
+            <a href="./contacts.html">Обратная связь</a>
+          </div>
+        </div>
+        <div class="footer__top__block4">
+          <div class="block4__text">Контакты</div>
+          <div class="block4__contacts">
+            <div class="block4__adress">
               РК, г. Нур-Султан, Проспект Мангилик Ел, 55/21, этаж 1, Блок C4.2,
               офис 164
-            </p>
-            <img
-              src="./assets/images/homeImg/phone_home.svg"
-              alt="Телефон"
-              class="contacts__img-phone" />
-            <p class="contacts__capture contacts__capture_phone">
-              +7 (7172) 24 72 80
-            </p>
-            <p class="contacts__description contacts__description_phone">
-              с 9:00 до 18:00
-            </p>
-            <img
-              src="./assets/images/homeImg/clock_home.svg"
-              alt="Время работы"
-              class="contacts__img-time" />
-            <p class="contacts__capture contacts__capture_time">
-              График работы
-            </p>
-            <p class="contacts__description contacts__description_time">
-              пн-вс (9:00-22:00)
-            </p>
-            <img
-              src="./assets/images/servicesImg/whatsapp.png"
-              alt="Whatsapp"
-              class="contacts__img-whatsapp" />
-            <p class="contacts__capture contacts__capture_whatsapp">
-              +7 (7172) 24 72 80
-            </p>
-            <p class="contacts__description contacts__description_whatsapp">
-              Whatsapp
-            </p>
-          </div>
-          <!--Социальные сети и оформить заявку-->
-          <div class="contacts__footer">
-            <div class="contacts__media">
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                class="contacts__social-media">
+            </div>
+            <div class="block4__tel">
+              <div class="block4__tel__logo">
                 <img
-                  src="./assets/images/servicesImg/instagram.png"
-                  alt="Инстаграм"
-                  class="contacts__social-media contacts__social-media_inst" />
-              </a>
-              <a
-                href="https://www.vk.com/"
-                target="_blank"
-                class="contacts__social-media">
-                <img
-                  src="./assets/images/servicesImg/vk.png"
-                  alt="ВКонтакте"
-                  class="contacts__social-media contacts__social-media_vk" />
-              </a>
-              <a
-                href="https://www.facebook.com/"
-                target="_blank"
-                class="contacts__social-media">
-                <img
-                  src="./assets/images/servicesImg/facebook.png"
-                  alt="Фейсбук"
-                  class="contacts__social-media contacts__social-media_fb" />
-              </a>
-            </div>
-            <a href="./contacts.html" target="_blank" class="contacts__button">
-              Оформить заявку</a
-            >
-          </div>
-        </div>
-      </div>
-
-      <!-- Блок Остались вопросы ? -->
-      <div class="connectionblock">
-        <h2>Остались вопросы ?</h2>
-        <div class="connectionblock__grid">
-          <div class="connectionblock__text">
-            <p>
-              Мinerals Operating – это молодая компания, которая оказывает
-              услуги в сфере недропользования на территории Казахстана. Мы одна
-              из первых компаний являющихся лицензированным консультантом в
-              сфере минеральных ресурсов (лицензия №AFSA-A-LA-2020-0004).
-              Мinerals Operating зарегистрирована
-            </p>
-            <p>
-              Мinerals Operating – это молодая компания, которая оказывает
-              услуги в сфере недропользования на территории Казахстана. Мы одна
-              из первых компаний являющихся
-            </p>
-          </div>
-          <p class="connectionblock__contacts">
-            Напишите нам <a href="#" class="blue-link">email.ru@mail.ru</a>
-            <br />
-            или звоните <a href="#" class="blue-link">+7 (700) 555-55-66</a>
-          </p>
-          <!-- Блок Остались вопросы форма -->
-
-          <form class="connectionblock__form" id="idform">
-            <input type="text" placeholder="Ваше имя" />
-            <input type="tel" placeholder="Ваш телефон" />
-            <textarea
-              class="textarea"
-              type="text"
-              placeholder="Сообщение"></textarea>
-          </form>
-          <div class="connectionblock__submit submit">
-            <button class="hard-btn submit__btn" type="submit" form="idform">
-              Оформить заявку
-            </button>
-            <p class="submit__text">
-              При нажатии кнопки “отправить”, вы соглашаетесь <br />на обработку
-              данных
-            </p>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <!-- Футер-->
-    <footer>
-      <div class="footer__top">
-        <div class="footer__top_full">
-          <!-- Футер/блок с логотипом и описанием-->
-          <div class="footer__top_block1">
-            <div class="footer__top_block1_logo">
-              <img
-                src="./assets/images/homeImg/home_logo_black.svg"
-                class="home_logo_black_img"
-                alt="Логотип" />
-            </div>
-            <div class="footer__top_block1_text">
-              Мinerals Operating – это молодая компания, которая оказывает
-              услуги в сфере недропользования на территории Казахстана. Мы одна
-              из первых компаний являющихся лицензированным консультантом в
-              сфере минеральных ресурсов (лицензия №AFSA-A-LA-2020-0004).
-            </div>
-          </div>
-          <!-- Футер/ с навигацией "Основное"-->
-          <div class="footer__top_block2">
-            <div class="footer__top_block2_text">Основное</div>
-            <div class="footer__top_block2_nav">
-              <a href="./home.html">Главная</a>
-              <a href="./about.html">О нас</a>
-              <a href="./services.html">Услуги</a>
-              <a href="./search.html">Вакансии</a>
-            </div>
-          </div>
-          <!-- Футер/Навигация-->
-          <div class="footer__top_block3">
-            <div class="footer__top_block3_text">Навигация</div>
-            <div class="footer__top_block3_nav">
-              <a href="./contacts.html">Контакты</a>
-              <a href="./search.html">Помощь</a>
-              <a href="#">Политика</a>
-              <a href="./contacts.html">Обратная связь</a>
-            </div>
-          </div>
-
-          <!-- Футер/ контакты-->
-          <div class="footer__top_block4">
-            <div class="footer__top_block4_text">Контакты</div>
-            <div class="footer__top_block4_contacts">
-              <div class="footer__top_block4_adress">
-                РК, г. Нур-Султан, Проспект Мангилик Ел, 55/21, этаж 1, Блок
-                C4.2, офис 164
+                  src="./assets/images/homeImg/phone_home.svg"
+                  class="footertoptelimg"
+                  alt="Логотип телефона"
+                />
               </div>
-              <!-- Футер/телефон-->
-              <div class="footer__top_block4_tel">
-                <div class="footer__top_block4_tel_logo">
-                  <img
-                    src="./assets/images/homeImg/phone_home.svg"
-                    class="footer_top_tel_img"
-                    alt="Логотип телефона" />
-                </div>
-                <div class="footer__top_block4_tel_number">
-                  <a href="tel:+77172247280"> +7 (7172) 24 72 80</a>
-                </div>
+              <div class="block4__tel__number">
+                <a href="tel:+77172247280"> +7 (7172) 24 72 80</a>
               </div>
-              <!-- Футер/социальные сети-->
-              <div class="footer__top_block4_media">
-                <div class="footer__top_block4_media_instagramm">
-                  <a href="https://www.instagram.com/"
-                    ><img
-                      src="./assets/images/servicesImg/instagram.png"
-                      class="media_img"
-                      alt="Логотип instagram" />
-                  </a>
-                </div>
-                <div class="footer__top_block4_media_vk">
-                  <a href="https://www.vk.com/"
-                    ><img
-                      src="./assets/images/servicesImg/vk.png"
-                      class="media_img"
-                      alt="Логотип vk"
-                  /></a>
-                </div>
-                <div class="footer__top_block4_media_facebook">
-                  <a href="https://www.facebook.com/"
-                    ><img
-                      src="./assets/images/servicesImg/facebook.png"
-                      class="media_img"
-                      alt="Логотип facebook"
-                  /></a>
-                </div>
+            </div>
+            <div class="block4__media">
+              <div class="media__instagramm">
+                <a href="https://www.instagram.com/"
+                  ><img
+                    src="./assets/images/servicesImg/instagram.png"
+                    class="mediaimg"
+                    alt="Логотип instagram"
+                  />
+                </a>
+              </div>
+              <div class="media__vk">
+                <a href="https://www.vk.com/"
+                  ><img
+                    src="./assets/images/servicesImg/vk.png"
+                    class="mediaimg"
+                    alt="Логотип vk"
+                /></a>
+              </div>
+              <div class="media__facebook">
+                <a href="https://www.facebook.com/"
+                  ><img
+                    src="./assets/images/servicesImg/facebook.png"
+                    class="mediaimg"
+                    alt="Логотип facebook"
+                /></a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- Футер//создатель сайта-->
-
-      <div class="footer__bottom">
-        <div class="footer__bottom_line"></div>
-        <div class="footer__bottom_text">© 2021 Создание сайта maxico.kz</div>
-      </div>
+      <div class="footer__line"></div>
+      <div class="footer__bottom">2021 Создание сайта maxico.kz</div>
     </footer>
   </body>
 </html>

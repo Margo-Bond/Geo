@@ -6,78 +6,90 @@
     <link rel="stylesheet" href="./assets/style/normalize.css" />
     <link
       rel="stylesheet"
-      href="./assets/style/servicesStyle/servicesStyle.css" />
+      href="./assets/style/servicesStyle/servicesStyle.css"
+    />
     <title>Наши услуги</title>
   </head>
   <body>
-    <!-- Страница Наши услуги -->
     <div class="main-container">
-      <!-- Шапка -->
       <header class="header">
-        <!-- Header-top -->
-        <div class="header__top">
-          <div class="header__top_full">
-            <div class="header__top_logo">
-              <img src="./assets/images/homeImg/home_logo.svg" alt="logo" />
+        <div class="header-top">
+          <div class="header-top__logo">
+            <img src="./assets/images/homeImg/home_logo.svg" alt="Логотип" />
+          </div>
+          <div class="header-top__menu">
+            <nav class="header-top__nav">
+              <a href="/home.html">Главная</a>
+              <a href="./about.html">О компании</a>
+              <a href="./services.html">Услуги</a>
+              <a href="./news.html">Новости</a>
+              <a href="./contacts.html">Контакты</a>
+            </nav>
+            <div class="burger">
+              <span></span>
             </div>
-            <div class="header__top_menu">
-              <nav>
-                <a href="/home.html" target="_blank">Главная</a>
-                <a href="./about.html" target="_blank">О компании</a>
-                <a href="./services.html" target="_blank">Услуги</a>
-                <a href="./news.html" target="_blank">Новости</a>
-                <a href="./contacts.html" target="_blank">Контакты</a>
-              </nav>
-              <div class="header__top_left">
-                <div class="contact_phone">
-                  <a href="tel:+77172247280"
-                    ><img
-                      src="./assets/images/homeImg/home_top_tel.svg"
-                      alt="phone"
-                  /></a>
-                </div>
-                <img
-                  src="./assets/images/homeImg/home_top_lupa_stick.svg"
-                  alt="lupa" />
-                <div class="header__top_lupa">
-                  <a href="./search.html" target="_blank"
-                    ><img
-                      src="./assets/images/homeImg/home_top_lupa.svg"
-                      alt="Поиск"
-                  /></a>
-                </div>
-                <div class="header__top_languages">
+            <div class="header-top__right right">
+              <div class="right__contact-phone">
+                <a href="tel:+77172247280"
+                  ><img
+                    src="./assets/images/homeImg/home_top_tel.svg"
+                    class="right__phone_big"
+                    alt="Телефон"
+                /></a>
+                <a href="tel:+77172247280">
                   <img
-                    class="header__top_languages-rus"
+                    src="./assets/images/aboutImg/phone.png"
+                    class="right__phone_small"
+                    alt="Телефон"
+                  />
+                </a>
+              </div>
+              <img
+                src="./assets/images/homeImg/home_top_lupa_stick.svg"
+                class="right__line"
+                alt="Поиск"
+              />
+              <div class="right__lupa">
+                <a href="./search.html"
+                  ><img
+                    src="./assets/images/homeImg/home_top_lupa.svg"
+                    alt="Поиск"
+                /></a>
+              </div>
+              <div class="right__languages languages">
+                <div class="languages__item languages__item_rus">
+                  <img
                     src="./assets/images/aboutImg/rus.png"
-                    alt="Русский флаг" />
+                    alt="Русский флаг"
+                  />
                   <p>Русский</p>
-                  <div class="choice">
-                    <input
-                      type="checkbox"
-                      id="dropdown-toggle"
-                      class="dropdown-toggle" />
-                    <label
-                      for="dropdown-toggle"
-                      class="header__top_languages-choice">
+                </div>
+                <div class="languages__choice">
+                  <img
+                    class="languages__vector"
+                    src="./assets/images/aboutImg/vector-options.png"
+                    alt="Выбор языка"
+                  />
+                  <ul class="languages__list">
+                    <li class="languages__item languages__item_kaz">
                       <img
-                        class="vector-choice"
-                        src="./assets/images/aboutImg/vector-options.png"
-                        alt="Выбор языка"
-                    /></label>
-                    <ul class="choice__list">
-                      <li>Казахский</li>
-                      <li>Английский</li>
-                    </ul>
-                  </div>
+                        src="./assets/images/aboutImg/kaz.png"
+                        alt="Флаг Казахстана"
+                      />Казахский
+                    </li>
+                    <li class="languages__item">
+                      <img
+                        src="./assets/images/aboutImg/usa.png"
+                        alt="Флаг США"
+                      />Английский
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Шапка нижняя часть -->
         <div class="header__bottom">
-          <!-- Навигационная цепочка-->
           <div class="header__link">
             <a href="./home.html">Главная </a>
             <img src="./assets/images/servicesImg/Vector.png" alt="Вектор" />
@@ -95,9 +107,7 @@
           </div>
         </div>
       </header>
-      <!--Галлерея услуг-->
       <main class="gallery">
-        <!--Буровые работы-->
         <div class="gallery__card gallery__card_without-bg">
           <div class="gallery__image gallery__image_drilling"></div>
           <div class="gallery__service">
@@ -119,7 +129,6 @@
             >
           </div>
         </div>
-        <!--Геологоразведочные работы-->
         <div class="gallery__card gallery__card_with-bg">
           <div class="gallery__service">
             <div class="gallery__title">Геологоразведочные работы</div>
@@ -139,7 +148,6 @@
           </div>
           <div class="gallery__image gallery__image_geological"></div>
         </div>
-        <!--Научно-исследовательские работы-->
         <div class="gallery__card gallery__card_without-bg">
           <div class="gallery__image gallery__image_research"></div>
           <div class="gallery__service">
@@ -159,7 +167,6 @@
             <a href="" class="gallery__button">Подробнее об услуге</a>
           </div>
         </div>
-        <!--Опытно-конструкторские работы-->
         <div class="gallery__card gallery__card_with-bg">
           <div class="gallery__service">
             <div class="gallery__title">Опытно-конструкторские работы</div>
@@ -179,7 +186,6 @@
           </div>
           <div class="gallery__image gallery__image_development"></div>
         </div>
-        <!--Геофизические исследования-->
         <div class="gallery__card gallery__card_without-bg">
           <div class="gallery__image gallery__image_geophysics"></div>
           <div class="gallery__service">
@@ -199,7 +205,6 @@
             <a href="" class="gallery__button">Подробнее об услуге</a>
           </div>
         </div>
-        <!--Проектирование горных производств-->
         <div class="gallery__card gallery__card_with-bg">
           <div class="gallery__service">
             <div class="gallery__title">Проектирование горных производств</div>
@@ -219,7 +224,6 @@
           </div>
           <div class="gallery__image gallery__image_mining"></div>
         </div>
-        <!--Природоохранное проектирование-->
         <div class="gallery__card gallery__card_without-bg">
           <div class="gallery__image gallery__image_environment"></div>
           <div class="gallery__service">
@@ -239,7 +243,6 @@
             <a href="" class="gallery__button">Подробнее об услуге</a>
           </div>
         </div>
-        <!--Консалтинговые услуги-->
         <div class="gallery__card gallery__card_with-bg">
           <div class="gallery__service">
             <div class="gallery__title">Консалтинговые услуги</div>
@@ -259,7 +262,6 @@
           </div>
           <div class="gallery__image gallery__image_consulting"></div>
         </div>
-        <!--Карта с контактами-->
         <div class="location">
           <div class="contacts">
             <div class="contacts__title">
@@ -272,16 +274,18 @@
               <img
                 src="./assets/images/servicesImg/address.png"
                 alt="Адрес"
-                class="contacts__img-address" />
+                class="contacts__img-address"
+              />
               <p class="contacts__capture contacts__capture_addres">Адрес</p>
               <p class="contacts__description contacts__description_addres">
-                РК, г. Нур-Султан, Проспект Мангилик Ел, 55/21, этаж 1, Блок
-                C4.2, офис 164
+                РК, г. Астана, Проспект Мангилик Ел, 55/21, этаж 1, Блок C4.2,
+                офис 164
               </p>
               <img
                 src="./assets/images/servicesImg/phone.png"
                 alt="Телефон"
-                class="contacts__img-phone" />
+                class="contacts__img-phone"
+              />
               <p class="contacts__capture contacts__capture_phone">
                 +7 (7172) 24 72 80
               </p>
@@ -291,7 +295,8 @@
               <img
                 src="./assets/images/servicesImg/clock.png"
                 alt="Время работы"
-                class="contacts__img-time" />
+                class="contacts__img-time"
+              />
               <p class="contacts__capture contacts__capture_time">
                 График работы
               </p>
@@ -301,7 +306,8 @@
               <img
                 src="./assets/images/servicesImg/whatsapp.png"
                 alt="Whatsapp"
-                class="contacts__img-whatsapp" />
+                class="contacts__img-whatsapp"
+              />
               <p class="contacts__capture contacts__capture_whatsapp">
                 +7 (7172) 24 72 80
               </p>
@@ -309,35 +315,40 @@
                 Whatsapp
               </p>
             </div>
-            <!--Социальные сети и оформить заявку-->
             <div class="contacts__footer">
               <div class="contacts__media">
                 <a
                   href="https://www.instagram.com/"
                   target="_blank"
-                  class="contacts__social-media">
+                  class="contacts__social-media"
+                >
                   <img
                     src="./assets/images/servicesImg/instagram.png"
                     alt="Инстаграм"
-                    class="contacts__social-media contacts__social-media_inst" />
+                    class="contacts__social-media contacts__social-media_inst"
+                  />
                 </a>
                 <a
                   href="https://www.vk.com/"
                   target="_blank"
-                  class="contacts__social-media">
+                  class="contacts__social-media"
+                >
                   <img
                     src="./assets/images/servicesImg/vk.png"
                     alt="ВКонтакте"
-                    class="contacts__social-media contacts__social-media_vk" />
+                    class="contacts__social-media contacts__social-media_vk"
+                  />
                 </a>
                 <a
                   href="https://www.facebook.com/"
                   target="_blank"
-                  class="contacts__social-media">
+                  class="contacts__social-media"
+                >
                   <img
                     src="./assets/images/servicesImg/facebook.png"
                     alt="Фейсбук"
-                    class="contacts__social-media contacts__social-media_fb" />
+                    class="contacts__social-media contacts__social-media_fb"
+                  />
                 </a>
               </div>
               <a href="./contacts.html#idform" class="contacts__button">
@@ -345,93 +356,173 @@
               >
             </div>
           </div>
+          <script
+            type="text/javascript"
+            charset="utf-8"
+            async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac56ac1e82d1e6d36f59800a8d5cbe77d1c0c234d755feaaea16d10b1cbc7d466&amp;width=100%&amp;lang=ru_RU&amp;scroll=true"
+          ></script>
         </div>
       </main>
-      <!-- Подвал -->
       <footer class="footer">
-        <div class="footer__top">
-          <div class="footer__top_full">
-            <!-- 1я колонка -->
-            <div class="footer__top_block">
-              <div class="footer__top-title-logo footer__top-title">
-                <img
-                  src="./assets/images/homeImg/home_logo_black.svg"
-                  alt="Логотип" />
-              </div>
-              <div class="footer__top-content footer__top-content-p">
-                <p>
-                  Мinerals Operating – это молодая компания, которая оказывает
-                  услуги в сфере недропользования на территории Казахстана. Мы
-                  одна из первых компаний являющихся лицензированным
-                  консультантом в сфере минеральных ресурсов (лицензия
-                  №AFSA-A-LA-2020-0004).
-                </p>
-              </div>
+        <div class="footer-top">
+          <div class="footer-top__block footer-top__block_1">
+            <div class="footer-top__title footer-top__title_logo">
+              <img
+                src="./assets/images/homeImg/home_logo_black.svg"
+                alt="Логотип"
+              />
             </div>
-            <!-- 2я колонка -->
-            <div class="footer__top_block">
-              <div class="footer__top-title">
-                <h6>Основное</h6>
-              </div>
-              <div class="footer__top-content footer__top-content-nav">
-                <a href="./home.html" target="_blank">Главная</a>
-                <a href="./about.html" target="_blank">О нас</a>
-                <a href="./services.html" target="_blank">Услуги</a>
+            <div class="footer-top__content">
+              <p>
+                Мinerals Operating – это молодая компания, которая оказывает
+                услуги в сфере недропользования на территории Казахстана. Мы
+                одна из первых компаний являющихся лицензированным консультантом
+                в сфере минеральных ресурсов (лицензия №AFSA-A-LA-2020-0004).
+              </p>
+            </div>
+          </div>
+          <div class="footer-top__block footer-top__block_2">
+            <div class="footer-top__title">
+              <h6>Основное</h6>
+            </div>
+            <div class="footer-top__content footer-top__content_nav">
+              <a href="./home.html">Главная</a>
+              <a href="./about.html">О нас</a>
+              <a href="./services.html">Услуги</a>
+              <a href="#">Вакансии</a>
+            </div>
+            <div class="footer-top__choice">
+              <img
+                class="footer-top__vector"
+                src="./assets/images/aboutImg/vector-options.png"
+                alt="Открыть пункты"
+              />
+              <div
+                class="footer-top__content-choice footer-top__content-choice_1"
+              >
+                <a href="./home.html">Главная</a>
+                <a href="./about.html">О нас</a>
+                <a href="./services.html">Услуги</a>
                 <a href="#">Вакансии</a>
               </div>
             </div>
-            <!-- 3я колонка -->
-            <div class="footer__top_block">
-              <div class="footer__top-title">
-                <h6>Навигация</h6>
-              </div>
-              <div class="footer__top-content footer__top-content-nav">
-                <a href="./contacts.html" target="_blank">Контакты</a>
-                <a href="contacts.html#gotoform" target="_blank">Помощь</a>
+          </div>
+          <div class="footer-top__block footer-top__block_3">
+            <div class="footer-top__title">
+              <h6>Навигация</h6>
+            </div>
+            <div class="footer-top__content footer-top__content_nav">
+              <a href="./contacts.html">Контакты</a>
+              <a href="contacts.html#gotoform">Помощь</a>
+              <a href="#" target="_blank">Политика</a>
+              <a href="contacts.html#gotoform">Обратная связь</a>
+            </div>
+            <div class="footer-top__choice">
+              <img
+                class="footer-top__vector"
+                src="./assets/images/aboutImg/vector-options.png"
+                alt="Открыть пункты"
+              />
+              <div
+                class="footer-top__content-choice footer-top__content-choice_2"
+              >
+                <a href="./contacts.html">Контакты</a>
+                <a href="contacts.html#gotoform">Помощь</a>
                 <a href="#" target="_blank">Политика</a>
-                <a href="contacts.html#gotoform" target="_blank"
-                  >Обратная связь</a
-                >
+                <a href="contacts.html#gotoform">Обратная связь</a>
               </div>
             </div>
-            <!-- 4я колонка -->
-            <div class="footer__top_block">
-              <div class="footer__top-title">
-                <h6>Контакты</h6>
+          </div>
+          <div class="footer-top__block footer-top__block_4">
+            <div class="footer-top__title">
+              <h6>Контакты</h6>
+            </div>
+            <div class="footer-top__content">
+              <p>
+                РК, г. Нур-Султан, Проспект Мангилик Ел, 55/21, этаж 1, Блок
+                C4.2, офис 164
+              </p>
+              <div class="footer-top__content-tel content-tel">
+                <div class="content-tel__icon">
+                  <img
+                    src="./assets/images/homeImg/footer_top_tel.png"
+                    alt="Телефон"
+                  />
+                </div>
+                <div class="content-tel__number">
+                  <a href="tel:+77172247280"> +7 (7172) 24 72 80</a>
+                </div>
               </div>
-              <div class="footer__top-content footer__top-content-adress">
+              <div class="footer-top__content-media content-media">
+                <a href="https://www.instagram.com/" target="_blank">
+                  <img
+                    src="./assets/images/servicesImg/instagram.png"
+                    alt="instagram"
+                    class="content-media__social"
+                  />
+                </a>
+                <a href="https://www.vk.com/" target="_blank">
+                  <img
+                    src="./assets/images/servicesImg/vk.png"
+                    alt="ВКонтакте"
+                    class="content-media__social"
+                  />
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                  <img
+                    src="./assets/images/servicesImg/facebook.png"
+                    alt="facebook"
+                    class="content-media__social"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="footer-top__choice">
+              <img
+                class="footer-top__vector"
+                src="./assets/images/aboutImg/vector-options.png"
+                alt="Открыть пункты"
+              />
+              <div
+                class="footer-top__content-choice footer-top__content-choice_3"
+              >
                 <p>
                   РК, г. Нур-Султан, Проспект Мангилик Ел, 55/21, этаж 1, Блок
                   C4.2, офис 164
                 </p>
-                <div class="footer__top-content_tel">
-                  <div class="footer__top_content_tel-icon">
+                <div class="footer-top__content-tel content-tel">
+                  <div class="content-tel__icon">
                     <img
                       src="./assets/images/homeImg/footer_top_tel.png"
-                      alt="Телефон" />
+                      alt="Телефон"
+                    />
                   </div>
-                  <div class="footer__top_block4_tel_number">
+                  <div class="content-tel__number">
                     <a href="tel:+77172247280"> +7 (7172) 24 72 80</a>
                   </div>
                 </div>
-                <div class="footer__top-content_media">
+                <div class="footer-top__content-media content-media">
                   <a href="https://www.instagram.com/" target="_blank">
                     <img
                       src="./assets/images/servicesImg/instagram.png"
-                      alt="Инстаграм"
-                      class="footer__top-content_media-social" />
+                      alt="instagram"
+                      class="content-media__social"
+                    />
                   </a>
                   <a href="https://www.vk.com/" target="_blank">
                     <img
                       src="./assets/images/servicesImg/vk.png"
                       alt="ВКонтакте"
-                      class="footer__top-content_media-social" />
+                      class="content-media__social"
+                    />
                   </a>
                   <a href="https://www.facebook.com/" target="_blank">
                     <img
                       src="./assets/images/servicesImg/facebook.png"
-                      alt="Фейсбук"
-                      class="footer__top-content_media-social" />
+                      alt="facebook"
+                      class="content-media__social"
+                    />
                   </a>
                 </div>
               </div>
@@ -441,13 +532,23 @@
         <img
           class="footer__line"
           src="./assets/images/aboutImg/footer-line.png"
-          alt="..." />
-        <div class="footer__bottom">
+          alt="Разделительная черта"
+        />
+        <div class="footer-bottom">
           © 2021 Создание сайта maxico.kz <br />
           Перепечатка и любое использование материалов возможно только при
           наличии ссылки на первоисточник
         </div>
       </footer>
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const choice = document.querySelector('.languages__choice');
+        const choiceList = document.querySelector('.languages__list');
+        choice.addEventListener('click', function () {
+          choiceList.classList.toggle('show');
+        });
+      });
+    </script>
   </body>
 </html>

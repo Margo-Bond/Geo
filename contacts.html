@@ -11,83 +11,89 @@
     <title>Контакты</title>
   </head>
   <body>
-    <!-- Header -->
     <header class="header">
-      <!-- Header-top -->
-      <div class="header__top">
-        <div class="header__top_full">
-          <div class="header__top_logo">
-            <img src="./assets/images/homeImg/home_logo.svg" alt="logo" />
+      <div class="header-top">
+        <div class="header-top__logo">
+          <img src="./assets/images/homeImg/home_logo.svg" alt="Логотип" />
+        </div>
+        <div class="header-top__menu">
+          <nav class="header-top__nav">
+            <a href="./home.html">Главная</a>
+            <a href="./about.html">О компании</a>
+            <a href="./services.html">Услуги</a>
+            <a href="./news.html">Новости</a>
+            <a href="./contacts.html">Контакты</a>
+          </nav>
+          <div class="burger">
+            <span></span>
           </div>
-          <div class="header__top_menu">
-            <nav>
-              <a href="/home.html">Главная</a>
-              <a href="./about.html">О компании</a>
-              <a href="./services.html">Услуги</a>
-              <a href="./news.html">Новости</a>
-              <a href="./contacts.html">Контакты</a>
-            </nav>
-            <div class="header__top_left">
-              <div class="contact_phone">
-                <a href="tel:+77172247280"
-                  ><img
-                    src="./assets/images/homeImg/home_top_tel.svg"
-                    alt="phone"
-                /></a>
-              </div>
-              <img
-                src="./assets/images/homeImg/home_top_lupa_stick.svg"
-                alt="lupa"
-              />
-              <div class="header__top_lupa">
-                <a href="./search.html"
-                  ><img
-                    src="./assets/images/homeImg/home_top_lupa.svg"
-                    alt="Поиск"
-                /></a>
-              </div>
-              <div class="header__top_languages">
+          <div class="header-top__right right">
+            <div class="right__contact-phone">
+              <a href="tel:+77172247280"
+                ><img
+                  src="./assets/images/homeImg/home_top_tel.svg"
+                  class="right__phone_big"
+                  alt="Телефон"
+              /></a>
+              <a href="tel:+77172247280">
                 <img
-                  class="header__top_languages-rus"
+                  src="./assets/images/aboutImg/phone.png"
+                  class="right__phone_small"
+                  alt="Телефон"
+                />
+              </a>
+            </div>
+            <img
+              src="./assets/images/homeImg/home_top_lupa_stick.svg"
+              class="right__line"
+              alt="Поиск"
+            />
+            <div class="right__lupa">
+              <a href="./search.html"
+                ><img
+                  src="./assets/images/homeImg/home_top_lupa.svg"
+                  alt="Поиск"
+              /></a>
+            </div>
+            <div class="right__languages languages">
+              <div class="languages__item languages__item_rus">
+                <img
                   src="./assets/images/aboutImg/rus.png"
                   alt="Русский флаг"
                 />
                 <p>Русский</p>
-                <div class="choice">
-                  <input
-                    type="checkbox"
-                    id="dropdown-toggle"
-                    class="dropdown-toggle"
-                  />
-                  <label
-                    for="dropdown-toggle"
-                    class="header__top_languages-choice"
-                  >
+              </div>
+              <div class="languages__choice">
+                <img
+                  class="languages__vector"
+                  src="./assets/images/aboutImg/vector-options.png"
+                  alt="Выбор языка"
+                />
+                <ul class="languages__list">
+                  <li class="languages__item languages__item_kaz">
                     <img
-                      class="vector-choice"
-                      src="./assets/images/aboutImg/vector-options.png"
-                      alt="Выбор языка"
-                  /></label>
-                  <ul class="choice__list">
-                    <li>Казахский</li>
-                    <li>Английский</li>
-                  </ul>
-                </div>
+                      src="./assets/images/aboutImg/kaz.png"
+                      alt="Флаг Казахстана"
+                    />Казахский
+                  </li>
+                  <li class="languages__item">
+                    <img
+                      src="./assets/images/aboutImg/usa.png"
+                      alt="Флаг США"
+                    />Английский
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
     </header>
-
-    <!-- Навигационная цепочка-->
     <div class="header__link">
       <a href="./home.html">Главная </a>
       <img src="./assets/images/newsImg/Vectorblue.png" alt="Вектор2" />
       <p>Контакты</p>
     </div>
-
-    <!-- основная часть - По всем вопросам -->
     <main class="main">
       <div class="email">
         <h2>
@@ -96,7 +102,6 @@
             >info@moperating.kz</a
           >
         </h2>
-        <!-- основная часть - соц сети-->
         <div class="contacts__media">
           <a
             href="https://www.instagram.com/"
@@ -131,10 +136,17 @@
               class="contacts__social-media contacts__social-media_fb"
             />
           </a>
+          <a
+            href="https://wa.me/79200000000?text=Здравствуйте%2C+у+меня+есть+вопрос"
+            target="_blank"
+            class="contacts__social-media"
+            ><img
+              src="./assets/images/servicesImg/whatsapp.png"
+              alt="Whatsapp"
+              class="contacts__social-media contacts__social-media_whatsapp"
+          /></a>
         </div>
       </div>
-
-      <!-- основная часть - контакты-->
       <div class="contacts__address">
         <img
           src="./assets/images/servicesImg/address.png"
@@ -178,10 +190,14 @@
         </p>
       </div>
     </main>
-
-    <!-- карта локация -->
-    <div class="location"></div>
-    <!-- Блок Остались вопросы ? -->
+    <div class="location">
+      <script
+        type="text/javascript"
+        charset="utf-8"
+        async
+        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac56ac1e82d1e6d36f59800a8d5cbe77d1c0c234d755feaaea16d10b1cbc7d466&amp;width=100%&amp;lang=ru_RU&amp;scroll=true"
+      ></script>
+    </div>
     <div class="connectionblock">
       <h2 id="gotoform">Остались вопросы ?</h2>
       <div class="connectionblock__grid">
@@ -208,91 +224,78 @@
           или звоните
           <a href="tel:+77005555566" class="blue-link">+7 (700) 555-55-66</a>
         </p>
-
-        <!-- Блок Остались вопросы форма -->
-
         <form class="connectionblock__form" id="idform">
           <input type="text" placeholder="Ваше имя" />
           <input type="tel" placeholder="Ваш телефон" />
           <textarea class="textarea" placeholder="Сообщение"></textarea>
         </form>
         <div class="connectionblock__submit submit">
-          <button class="hard-btn submit__btn" type="submit" form="idform">
+          <button class="submit__btn" type="submit" form="idform">
             Оформить заявку
           </button>
           <p class="submit__text">
-            При нажатии кнопки “отправить”, вы соглашаетесь <br />на обработку
-            данных
+            При нажатии кнопки “отправить”, вы соглашаетесь на обработку данных
           </p>
         </div>
       </div>
     </div>
-
-    <!-- Футер-->
-    <footer class="footer-base">
+    <footer class="footer">
       <div class="footer__top">
-        <div class="footer__top_full">
-          <!-- Футер/блок с логотипом и описанием-->
-          <div class="footer__top_block1">
-            <div class="footer__top_block1_logo">
+        <div class="footer__full">
+          <div class="footer__block1">
+            <div class="footer__logo">
               <img
-                src="./assets/images/homeImg/home_logo_black.svg"
+                src="./assets/images/homeImg/home_logo_black.png"
                 class="home_logo_black_img"
                 alt="logo"
               />
             </div>
-            <div class="footer__top_block1_text">
+            <div class="footer__block1-text">
               Мinerals Operating – это молодая компания, которая оказывает
               услуги в сфере недропользования на территории Казахстана. Мы одна
               из первых компаний являющихся лицензированным консультантом в
               сфере минеральных ресурсов (лицензия №AFSA-A-LA-2020-0004).
             </div>
           </div>
-          <!-- Футер/ с навигацией "Основное"-->
-          <div class="footer__top_block2">
-            <div class="footer__top_block2_text">Основное</div>
-            <div class="footer__top_block2_nav">
+          <div class="footer__block2">
+            <div class="footer__block2-text">Основное</div>
+            <div class="footer__block2-nav">
               <a href="./home.html">Главная</a>
               <a href="./about.html">О нас</a>
               <a href="./services.html">Услуги</a>
               <a href="./search.html">Вакансии</a>
             </div>
           </div>
-          <!-- Футер/Навигация-->
-          <div class="footer__top_block3">
-            <div class="footer__top_block3_text">Навигация</div>
-            <div class="footer__top_block3_nav">
+          <div class="footer__block3">
+            <div class="footer__block3-text">Навигация</div>
+            <div class="footer__block3-nav">
               <a href="./contacts.html">Контакты</a>
               <a href="./search.html">Помощь</a>
               <a href="./search.html">Политика</a>
               <a href="./contacts.html">Обратная связь</a>
             </div>
           </div>
-
-          <!-- Футер/ контакты-->
-          <div class="footer__top_block4">
-            <div class="footer__top_block4_text">Контакты</div>
-            <div class="footer__top_block4_contacts">
-              <div class="footer__top_block4_adress">
+          <div class="footer__block4">
+            <div class="footer__block4-text">Контакты</div>
+            <div class="footer__block4-contacts">
+              <div class="footer__block4-adress">
                 РК, г. Нур-Султан, Проспект Мангилик Ел, 55/21, этаж 1, Блок
                 C4.2, офис 164
               </div>
-              <!-- Футер/телефон-->
-              <div class="footer__top_block4_tel">
-                <div class="footer__top_block4_tel_logo">
+              <div class="footer__block4-tel">
+                <div class="footer__block4-tellogo">
                   <img
                     src="./assets/images/homeImg/footer_top_tel.png"
                     class="footer_top_tel_img"
                     alt="logo tel"
                   />
                 </div>
-                <div class="footer__top_block4_tel_number">
+                <div class="footer__block4-telnumber">
                   <a href="tel:+77172247280"> +7 (7172) 24 72 80</a>
                 </div>
               </div>
-              <!-- Футер/социальные сети-->
-              <div class="footer__top_block4_media">
-                <div class="footer__top_block4_media_instagramm">
+              <div class="footer__block4-media">
+                <div class="footer__block4-media-instagramm">
                   <a href="https://www.instagram.com/"
                     ><img
                       src="./assets/images/homeImg/instagram.png"
@@ -301,7 +304,7 @@
                     />
                   </a>
                 </div>
-                <div class="footer__top_block4_media_vk">
+                <div class="footer__block4-media-vk">
                   <a href="https://www.vk.com/"
                     ><img
                       src="./assets/images/homeImg/vk.png"
@@ -309,7 +312,7 @@
                       alt="logo vk"
                   /></a>
                 </div>
-                <div class="footer__top_block4_media_facebook">
+                <div class="footer__block4-media-facebook">
                   <a href="https://www.facebook.com/"
                     ><img
                       src="./assets/images/homeImg/facebook.png"
@@ -322,7 +325,6 @@
           </div>
         </div>
       </div>
-      <!-- Футер//линия разделитель-->
       <div>
         <img
           class="footer__line"
@@ -330,7 +332,6 @@
           alt="..."
         />
       </div>
-      <!-- Футер//создатель сайта-->
       <div class="footer__bottom">
         <p>© 2021 Создание сайта maxico.kz</p>
         <p>
@@ -339,5 +340,36 @@
         </p>
       </div>
     </footer>
+    <script>
+      document.querySelector(".burger").addEventListener("click", function () {
+        this.classList.toggle("active");
+        document.querySelector(".header-top__nav").classList.toggle("open");
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const choice = document.querySelector(".languages__choice");
+        const choiceList = document.querySelector(".languages__list");
+
+        choice.addEventListener("click", function () {
+          choiceList.classList.toggle("show");
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const choices = document.querySelectorAll(".footer-top__choice");
+
+        choices.forEach((choice) => {
+          choice.addEventListener("click", function () {
+            const choiceListNav = this.querySelector(
+              ".footer-top__content-choice"
+            );
+
+            choiceListNav.classList.toggle("show");
+          });
+        });
+      });
+    </script>
   </body>
 </html>
